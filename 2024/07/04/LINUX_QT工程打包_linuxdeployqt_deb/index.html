@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Hexo</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Hexo</a> 
+            <span class="description">不知道写啥，就祝大家暴富吧！</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-%E5%87%86%E5%A4%87%EF%BC%9A%E5%AE%89%E8%A3%85%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7linuxdepoyqt"><span class="post-toc-text">1. 准备：安装打包工具linuxdepoyqt</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-%E5%87%86%E5%A4%87%EF%BC%9A%E6%A3%80%E6%9F%A5qmake"><span class="post-toc-text">2. 准备：检查qmake</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-%E6%89%93%E5%8C%85"><span class="post-toc-text">3. 打包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-%E6%89%93%E5%8C%85%E4%B8%BAdeb"><span class="post-toc-text">4. 打包为deb</span></a></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="1-准备：安装打包工具linuxdepoyqt"><a href="#1-准备：安装打包工具linuxdepoyqt" class="headerlink" title="1. 准备：安装打包工具linuxdepoyqt"></a><strong>1.</strong> 准备：安装打包工具linuxdepoyqt</h2><p>(1). 下载inuxdepoyqt </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">转到链接：https://github.com/probonopd/linuxdeployqt/releases</span><br><span class="line">下载文件：linuxdeployqt-countinuous-x86_64.AppImage</span><br></pre></td></tr></table></figure>
+
+<p>(2). 拷贝到 &#x2F;usr&#x2F;local&#x2F;bin目录中，并重命名</p>
+<p><code>cp linuxdeployqt-continuous-x86_64.AppImage /usr/local/bin/linuxdeployqt</code></p>
+<p>(3). 修改权限</p>
+<p><code>chmod 777 linuxdeployqt </code></p>
+<p>(4). 打印版本信息（检查是否正确安装）</p>
+<p><code>linuxdeployqt -version</code></p>
+<h2 id="2-准备：检查qmake"><a href="#2-准备：检查qmake" class="headerlink" title="2. 准备：检查qmake"></a><strong>2.</strong> 准备：检查qmake</h2><p>(1). 安装qtchooser</p>
+<p><code>apt install qtchooser</code></p>
+<p>(2). 修改default.conf</p>
+<p><code>vim /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/opt/Qt5.14.2/5.14.2/gcc_64/bin</span><br><span class="line">/opt/Qt5.14.2/5.14.2/</span><br></pre></td></tr></table></figure>
+
+<p>(3). 打印版本</p>
+<p><code>qmake -v</code></p>
+<h2 id="3-打包"><a href="#3-打包" class="headerlink" title="3. 打包"></a>3. 打包</h2><p>(1). 准备文件夹</p>
+<p>准备一个文件夹，如<code>AppFolder</code>，将<code>qt-release</code>编译生成的可执行文件<code>TestAPP</code>，以及所用到的资源文件（图标、图片、DB文件等）放到<code>AppFolder</code>。</p>
+<p>(2). 自动复制所需库文件</p>
+<p>命令：<code>linuxdeployqt App -appimage</code>，报错执行3.3</p>
+<p>(3). 编辑配置文件</p>
+<p>执行<code>vim default.desktop</code>打开文件，在该文件末尾追加<code>Categories</code>（注意分号不可省略）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application					</span><br><span class="line">Name=TestAPP</span><br><span class="line">Exec=/usr/src/MyAPP/AppRun %F</span><br><span class="line">Icon=/usr/src/MyAPP/AppRun/images/logo.png</span><br><span class="line">Comment=Edit this default file</span><br><span class="line">Terminal=true</span><br><span class="line">Categories=Application;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>desktop官方手册：<a target="_blank" rel="noopener" href="https://help.ubuntu.com/community/UnityLaunchersAndDesktopFiles">https://help.ubuntu.com/community/UnityLaunchersAndDesktopFiles</a></p>
+</blockquote>
+<blockquote>
+<p>在<code>Linux</code>系统中，<code>.desktop</code>文件就是用来运行程序的快捷方式，是一个包含程序信息的纯文本文件。</p>
+<p><code>.desktop</code>文件以<code>UTF-8</code>编码，每一行由换行符分割。</p>
+<p><code>.desktop</code>文件通常放在<code>~/.local/share/applications</code>或<code>/usr/share/applications</code>目录下。</p>
+<p>通常，应用程序在安装后都会自动创建<code>.desktop</code>文件，如果是自己使用源代码编译得到的程序或者自己下载的压缩格式的应用，就需要打开终端执行其二进制文件，以及手动创建<code>.desktop</code>文件。</p>
+<p>① 注释：以<code>#</code>开头</p>
+<p>② 组：第一个组必须是<code>[Desktop Entry]</code>，其后跟随的<code>Key=Value</code>都属于该组，直到遇到下一个组为止；</p>
+<p>③ 项：</p>
+<ul>
+<li><p>每一个项的格式均为<code>Key=Value</code>（<code>=</code>两边不能有空格，<code>Key</code>只能用<code>[A-Za-z0-9]</code>，不同组的<code>Key</code>可以同名）</p>
+</li>
+<li><p><code>Value</code>类型有<code>boolean</code>、<code>numberic</code>、<code>string</code>、<code>localestring</code>(用户可显示的用<code>UTF-8</code>的字符串)</p>
+</li>
+<li><p>键的本地化值</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Name=Foo</span><br><span class="line">Name[sr_YU]=...</span><br><span class="line">Name[sr@Latn]=...</span><br><span class="line">Name[sr]=...</span><br></pre></td></tr></table></figure>
+
+<p>其通用Key为：(<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014025444/article/details/94024282">https://blog.csdn.net/u014025444/article/details/94024282</a>)</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>描述</th>
+<th>Value Type</th>
+<th>是否必须</th>
+<th>生效的Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Type</td>
+<td>(1). Application<br />(2). Link<br />(3). Directory</td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>应用程序的特定名称</td>
+<td>localstring</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>GenericName</td>
+<td>应用程序的通用名称</td>
+<td>localstring</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>Exec</td>
+<td>执行路径（绝对路径）</td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>TryExec</td>
+<td>如果文件不存在, 则忽略该文件，并不在菜单中出现</td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>URL</td>
+<td>当Type&#x3D;Link时，可执行文件指向的URL</td>
+<td>string</td>
+<td>1</td>
+<td>(2)</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>应用描述</td>
+<td>localestring</td>
+<td>0</td>
+<td>1-3</td>
+</tr>
+<tr>
+<td>Icon</td>
+<td>应用图标(绝对路径, 或符合图标主题规范)</td>
+<td>localestring</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>Path</td>
+<td>当Type&#x3D;Application时，程序运行的目录</td>
+<td>string</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application		# </span><br><span class="line">Name=MyAPP				# 应用名称</span><br><span class="line">Icon=/path/to/icon		# 应用图标，绝对路径</span><br><span class="line">Exec=/path/to/AppRun	# 可执行文件的路径，绝对路径</span><br><span class="line">Encoding=UTF-8			</span><br><span class="line">Version=0.1.0</span><br><span class="line">Terminal=false</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>(4). 再次执行</p>
+<p>执行<code>linuxdeployqt App -appimage</code>或<code>sudo linuxdeployqt Appname-appimage -unsupported-allow-new-glibc</code>，最终生成的<code>TestAPP</code>，即可执行。</p>
+<blockquote>
+<p>报错解决：若出现<code>xxx.so.1</code>不存在，需要手动拷贝<code>release</code>文件夹下生成的对应<code>so</code>文件，复制到<code>AppFloder</code>下的<code>lib</code>文件夹中。</p>
+</blockquote>
+<h2 id="4-打包为deb"><a href="#4-打包为deb" class="headerlink" title="4. 打包为deb"></a>4. 打包为deb</h2><p> <code>deb</code>是<code>Debian Linux</code>的软件包格式，通常是以编译源码的方式制作<code>deb</code>包，此处是以生成的发布文件夹的方式制作<code>deb</code>包。</p>
+<p> (1). 准备工作</p>
+<p>创建一个目录， 如<code>MyAPP</code>，自定义程序的安装路径为<code>/usr/src</code>（文件默认是释放到根目录下），并将之前生成的发布文件夹复制到<code>MyAPP/usr/src</code>下。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> MyAPP</span><br><span class="line"><span class="built_in">cd</span> MyAPP</span><br><span class="line"><span class="built_in">mkdir</span> -p usr/src</span><br><span class="line">cp -a ~/AppFolder usr/src</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：<code>desktop</code>文件中 <code>Exec</code> 和 <code>Icon</code> 必须要是<strong>绝对路径</strong>！</p>
+</blockquote>
+<p>(2). DEBIAN</p>
+<p>在<code>MyAPP</code>下创建一个目录<code>DEBIAN</code>，在<code>DEBIAN</code>下创建一个<code>control</code>文件，并编写以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir DEBIAN</span><br><span class="line">cd DEBIAN</span><br><span class="line">vim control</span><br></pre></td></tr></table></figure>
+
+<p>control</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package: MyAPP</span><br><span class="line">Version: 1.0.1</span><br><span class="line">Section: utils</span><br><span class="line">Priority: optional</span><br><span class="line">Architecture: amd64</span><br><span class="line">Depends:</span><br><span class="line">Installed-Size: 4096</span><br><span class="line">Maintainer: Smith</span><br><span class="line">Description: MyAPP-deb</span><br></pre></td></tr></table></figure>
+
+<p>postinst</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">chmod 777 /usr/src/MyAPP/MyAPP.desktop</span><br><span class="line">cp /usr/src/MyAPP/MyAPP.desktop /usr/share/applications/</span><br><span class="line">cp /usr/src/MyAPP/MyAPP.desktop ~/桌面/</span><br></pre></td></tr></table></figure>
+
+<p>postrm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">rm /usr/share/applications/MyAPP.desktop</span><br><span class="line">rm ~/桌面/MyAPP.desktop</span><br></pre></td></tr></table></figure>
+
+
+
+<p>(3). 构建生成deb包</p>
+<p>执行<code>dpkg -b . MyAPP.0.1_amd64.deb</code>，生成<code>deb</code>包，可以指定<code>deb</code>包的生成路径。</p>
+<p>(4). 安装deb包</p>
+<p>执行<code>dpkg -i MyAPP.0.1_amd64.deb</code>后，在<code>/usr/src</code>中会多出一个<code>MyAPP</code>目录，执行其中即可</p>
+<p>(5). 卸载deb包</p>
+<p><code>dpkg -r MyAPP</code></p>
+<blockquote>
+<p>安装失败时，重新安装会发生的问题：</p>
+<p>问题一：子进程 xxx 已安装 pre-removal 脚本 返回了错误号 1 或 2 </p>
+<p>解决方案：打开<code>gedit /var/lib/dpkg/status</code>,找到<code>Package: 包名</code>，将那一部分删除即可。</p>
+</blockquote>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-04</span>
+            
+            
+             
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>

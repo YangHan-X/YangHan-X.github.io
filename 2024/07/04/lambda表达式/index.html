@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Hexo</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Hexo</a> 
+            <span class="description">不知道写啥，就祝大家暴富吧！</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="post-toc-text">语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#capture-list"><span class="post-toc-text">capture list</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8"><span class="post-toc-text">参数列表</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%99%90%E5%AE%9A%E7%AC%A6-mutable"><span class="post-toc-text">限定符 mutable</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BC%82%E5%B8%B8%E8%AF%B4%E6%98%8E%E7%AC%A6-noexcept"><span class="post-toc-text">异常说明符 noexcept</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC%E7%B1%BB%E5%9E%8B-type"><span class="post-toc-text">返回值类型 -&gt;type</span></a></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><code>Lambda</code>表达式，是<code>C++11</code>的一个重要特性；<br>它可以用来创建<code>匿名函数</code>，并可以作为<code>函数对象</code>来使用，以替代繁琐的函数声明和定义。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">[capture list] (parameters) <span class="function"><span class="keyword">mutable</span> <span class="title">throw</span><span class="params">()</span> -&gt; <span class="keyword">return</span>-type </span>&#123; statement &#125;;</span><br><span class="line"></span><br><span class="line">[捕获列表] (参数列表) 可变规则 异常说明() -&gt; 返回类型 &#123; 函数体 &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="capture-list"><a href="#capture-list" class="headerlink" title="capture list"></a>capture list</h2><p>捕获列表，可以捕获当前函数作用域中的一个或多个局部变量（变量之间使用逗号隔开），在函数体中，可以访问或修改这些局部变量。<br>捕获方式分为3种：</p>
+<ul>
+<li><code>值捕获</code><ul>
+<li>将局部变量以<code>const引用</code>形式传递到Lambda中，即Lambda<code>可以访问但无法修改</code>这些变量。</li>
+<li>使用<code>=</code>可以将所有局部变量以<code>值捕获</code>形式传入到表达式中。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>, b = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">auto</span> func1 = [a, b] &#123; <span class="keyword">return</span> a + b; &#125;;</span><br><span class="line"><span class="keyword">auto</span> func2 = [=] &#123; <span class="keyword">return</span> a + b; &#125;;</span><br><span class="line"><span class="type">int</span> res1 = <span class="built_in">func1</span>();</span><br><span class="line"><span class="type">int</span> res2 = <span class="built_in">func1</span>();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>引用捕获</code><ul>
+<li>将局部变量以<code>引用</code>形式传递到Lambda中，即Lambda<code>可以访问也可以修改</code>这些变量。</li>
+<li>使用<code>&amp;</code>可以将所有局部变量以<code>引用捕获</code>形式传入到Lambda表达式中。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>, b = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">auto</span> func1 = [&amp;a, &amp;b] &#123; a++; <span class="keyword">return</span> a + b; &#125;;</span><br><span class="line"><span class="keyword">auto</span> func2 = [&amp;] &#123; b++; <span class="keyword">return</span> a + b; &#125;;</span><br><span class="line"><span class="type">int</span> res1 = <span class="built_in">func1</span>();</span><br><span class="line"><span class="type">int</span> res2 = <span class="built_in">func2</span>();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>混合捕获</code><ul>
+<li>捕获列表中，既有<code>值捕获</code>的变量，也有<code>引用捕获</code>的变量。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>, b = <span class="number">2</span>, c = <span class="number">3</span>, d = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">auto</span> func1 = [=, &amp;a] &#123; a++; <span class="keyword">return</span> a + b + c;&#125; ;</span><br><span class="line"><span class="keyword">auto</span> func2 = [=, &amp;b, &amp;c] &#123; b++; c++; <span class="keyword">return</span> a + b + c; &#125;;</span><br><span class="line"><span class="keyword">auto</span> func3 = [&amp;, a, b] &#123; c++; <span class="keyword">return</span> a + b + c; &#125;;</span><br><span class="line"><span class="type">int</span> res1 = <span class="built_in">func1</span>();</span><br><span class="line"><span class="type">int</span> res2 = <span class="built_in">func2</span>();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>其他捕获<ul>
+<li><code>[]</code>：什么都不捕获；</li>
+<li><code>[this]</code>：捕获<code>this</code>指针，<code>=</code> 和 <code>&amp;</code> 也能捕获this指针；</li>
+</ul>
+</li>
+</ul>
+<h2 id="参数列表"><a href="#参数列表" class="headerlink" title="参数列表"></a>参数列表</h2><p>Lambda可以传递捕获列表，也可以传递参数列表，用法和普通函数一致。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> func = [](<span class="type">int</span> a, <span class="type">int</span> b) &#123; <span class="keyword">return</span> a + b; &#125;;</span><br><span class="line"><span class="type">int</span> res = <span class="built_in">func</span>(<span class="number">10</span>, <span class="number">20</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="限定符-mutable"><a href="#限定符-mutable" class="headerlink" title="限定符 mutable"></a>限定符 mutable</h2><p>限定符mutable，可以使Lambda在函数体内修改<code>值捕获</code>的变量；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> f1 = [a]() &#123;a++;&#125;;         <span class="comment">// error</span></span><br><span class="line"><span class="keyword">auto</span> f2 = [a]() <span class="keyword">mutable</span> &#123;a++;&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="异常说明符-noexcept"><a href="#异常说明符-noexcept" class="headerlink" title="异常说明符 noexcept"></a>异常说明符 noexcept</h2><p>异常说明符noexcept，指定了Lambda不会抛出异常；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="返回值类型-type"><a href="#返回值类型-type" class="headerlink" title="返回值类型 -&gt;type"></a>返回值类型 -&gt;type</h2></div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-04</span>
+            
+            
+             
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Hexo</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Hexo</a> 
+            <span class="description">不知道写啥，就祝大家暴富吧！</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%95"><span class="post-toc-text">方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A0%B7%E5%BC%8F"><span class="post-toc-text">样式</span></a></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">QCalendarWidget *calendar = <span class="keyword">new</span> <span class="built_in">QCalendarWidget</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 隐藏导航栏</span></span><br><span class="line">calendar-&gt;<span class="built_in">setNavigationBarVisible</span>(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 隐藏日期网格线</span></span><br><span class="line">calendar-&gt;<span class="built_in">setGridVisible</span>(<span class="literal">false</span>);</span><br><span class="line"><span class="comment">// 设置每列第一天为周几</span></span><br><span class="line">calendar-&gt;<span class="built_in">setFirstDayOfWeek</span>(Qt::Saturday);</span><br><span class="line"><span class="comment">// 设置周几显示的文字类型</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    QCalendarWidget::NoHorizontalHeader:    0, 隐藏日期标题</span></span><br><span class="line"><span class="comment">    QCalendarWidget::SingleLetterDayNames:  1, 日期首字母缩写(如M, T, S, T, F, S, S)</span></span><br><span class="line"><span class="comment">    QCalendarWidget::ShortDayNames:         2, 日期简写</span></span><br><span class="line"><span class="comment">    QCalendarWidget::LongDayNames:          3, 日期全称</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">calendar-&gt;<span class="built_in">setHorizontalHeaderFormat</span>(QCalendarWidget::SingleLetterDayNames);</span><br></pre></td></tr></table></figure>
+
+<h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* 日历全样式 */</span></span><br><span class="line">QCalendarWidget QWidget &#123;</span><br><span class="line">    <span class="attribute">font</span>: <span class="number">14px</span> Microsoft YaHei;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 日历导航栏样式 */</span></span><br><span class="line"><span class="selector-id">#qt_calendar_navigationbar</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 按钮样式：上个月、下个月 */</span></span><br><span class="line"><span class="selector-id">#qt_calendar_prevmouth</span> &#123;&#125;;</span><br><span class="line"><span class="selector-id">#qt_calendar_nextmouth</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 按钮样式：当前月份-正常状态、选择状态 */</span></span><br><span class="line">QToolButton<span class="selector-id">#qt_calendar_mouthbutton</span> &#123;&#125;;</span><br><span class="line">QCalendarWidget QMenu &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 按钮样式：当前年份-正常状态、选择状态*/</span></span><br><span class="line">QToolButton<span class="selector-id">#qt_calendar_yearbutton</span> &#123;&#125;;</span><br><span class="line">QCalendarWidget QSpinBox<span class="selector-id">#qt_calendar_yearedit</span> &#123;&#125;;</span><br><span class="line">QCalendarWidget QSpinBox<span class="selector-id">#qt_calendar_yearedit</span>::up-arrow &#123;&#125;;     <span class="comment">/* 上箭头 */</span></span><br><span class="line">QCalendarWidget QSpinBox<span class="selector-id">#qt_calendar_yearedit</span>::down-arrow &#123;&#125;;   <span class="comment">/* 下箭头 */</span></span><br><span class="line">QCalendarWidget QSpinBox<span class="selector-id">#qt_calendar_yearedit</span>::up-button &#123;&#125;;    <span class="comment">/* 上图标 */</span></span><br><span class="line">QCalendarWidget QSpinBox<span class="selector-id">#qt_calendar_yearedit</span>::down-button &#123;&#125;;  <span class="comment">/* 下图标 */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 周栏 */</span></span><br><span class="line"><span class="comment">/* 样式：周一到周五 */</span></span><br><span class="line">QCalendarWidget QTableView &#123;</span><br><span class="line">    alternate-<span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/* 样式：周六到周日（需要代码单独设置） */</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">QTextCharFormat weekendFormat;</span></span><br><span class="line"><span class="comment">weekendFormat.setForeground(QBrush(QColor(153, 51, 255)));</span></span><br><span class="line"><span class="comment">calendar-&gt;setWeekdayTextFormat(Qt::Saturday, weekendFormat);</span></span><br><span class="line"><span class="comment">calendar-&gt;setWeekdayTextFormat(Qt::Sunday, weekendFormat);</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 日期栏 */</span></span><br><span class="line"><span class="selector-id">#qt_calendar_calendarview</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">229</span>, <span class="number">229</span>, <span class="number">252</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 选中月日期 */</span></span><br><span class="line">QCalendarWidget QAbstractItemView<span class="selector-pseudo">:enabled</span>&#123;</span><br><span class="line">        <span class="attribute">font</span>:<span class="number">18px</span> Microsoft YaHei;</span><br><span class="line">        <span class="attribute">color</span>:<span class="built_in">rgb</span>(<span class="number">0</span>, <span class="number">204</span>, <span class="number">204</span>);</span><br><span class="line">        selection-<span class="attribute">color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line">        selection-<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">0</span>, <span class="number">102</span>, <span class="number">102</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/* 非选中月日期 */</span></span><br><span class="line">QCalendarWidget QAbstractItemView<span class="selector-pseudo">:disabled</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>:<span class="built_in">rgb</span>(<span class="number">204</span>, <span class="number">255</span>, <span class="number">204</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-04</span>
+            
+            
+             
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>

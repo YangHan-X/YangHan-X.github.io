@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Hexo</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Hexo</a> 
+            <span class="description">不知道写啥，就祝大家暴富吧！</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QCoreApplication&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QSocketNotifier&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/inotify.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QDebug&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">QCoreApplication <span class="title">a</span><span class="params">(argc, argv)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> fd = <span class="number">-1</span>, wd = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    fd = <span class="built_in">inotify_init</span>();</span><br><span class="line">    <span class="keyword">if</span> (fd &lt; <span class="number">0</span>) &#123; <span class="built_in">perror</span>(<span class="string">&quot;inotify_init: &quot;</span>); &#125;</span><br><span class="line"></span><br><span class="line">    wd = <span class="built_in">inotify_add_watch</span>(fd, <span class="string">&quot;/opt/WorkSpace/test&quot;</span>, IN_ALL_EVENTS);</span><br><span class="line">    <span class="keyword">if</span> (wd &lt; <span class="number">0</span>) &#123; <span class="built_in">perror</span>(<span class="string">&quot;inotify_add_watch: &quot;</span>); &#125;</span><br><span class="line"></span><br><span class="line">    QSocketNotifier *notifier = <span class="keyword">new</span> <span class="built_in">QSocketNotifier</span>(fd, QSocketNotifier::Read);</span><br><span class="line">    QObject::<span class="built_in">connect</span>(notifier, &amp;QSocketNotifier::activated, [&amp;]() </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> offset = <span class="number">0</span>;</span><br><span class="line">        <span class="type">char</span> buffer[<span class="number">4096</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">        <span class="keyword">struct</span> inotify_event *event = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="type">int</span> length = <span class="built_in">read</span>(fd, buffer, <span class="built_in">sizeof</span>(buffer));</span><br><span class="line">        <span class="keyword">if</span> (length &lt; <span class="number">0</span>) &#123; <span class="built_in">perror</span>(<span class="string">&quot;read: &quot;</span>); &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (offset &lt; length)</span><br><span class="line">        &#123;</span><br><span class="line">            event = (<span class="keyword">struct</span> inotify_event *)&amp;buffer[offset];</span><br><span class="line">            <span class="keyword">if</span> (event-&gt;len)</span><br><span class="line">            &#123;</span><br><span class="line">                QString operate;</span><br><span class="line">                <span class="type">int</span> mask = event-&gt;mask;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_ACCESS)        operate = <span class="string">&quot;ACCESS&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_ATTRIB)        operate = <span class="string">&quot;ATTRIB&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_CLOSE_WRITE)   operate = <span class="string">&quot;CLOSE_WRITE&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_CLOSE_NOWRITE) operate = <span class="string">&quot;CLOSE_NOWRITE&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_CREATE)        operate = <span class="string">&quot;CREATE&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_DELETE_SELF)   operate = <span class="string">&quot;DELETE_SELF&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_MODIFY)        operate = <span class="string">&quot;MODIFY&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_MOVE_SELF)     operate = <span class="string">&quot;MOVE_SELF&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_MOVED_FROM)    operate = <span class="string">&quot;MOVED_FROM&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_MOVED_TO)      operate = <span class="string">&quot;MOVED_TO&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_OPEN)          operate = <span class="string">&quot;OPEN&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_IGNORED)       operate = <span class="string">&quot;IGNORED&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_DELETE)        operate = <span class="string">&quot;DELETE&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (mask &amp; IN_UNMOUNT)       operate = <span class="string">&quot;UNMOUNT&quot;</span>;</span><br><span class="line">                <span class="built_in">qDebug</span>() &lt;&lt;  event-&gt;name &lt;&lt; operate;</span><br><span class="line">            &#125;</span><br><span class="line">            offset += <span class="built_in">sizeof</span>(<span class="keyword">struct</span> inotify_event) + event-&gt;len;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> a.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>相关资料：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6966910863101919269">https://juejin.cn/post/6966910863101919269</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/unonoi/article/details/125744120">https://blog.csdn.net/unonoi/article/details/125744120</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/PikapBai/p/14480881.html#4%20inotify%20%E5%B8%B8%E7%94%A8%E7%9B%91%E6%8E%A7%E4%BA%8B%E4%BB%B6#">https://www.cnblogs.com/PikapBai/p/14480881.html#4%20inotify%20%E5%B8%B8%E7%94%A8%E7%9B%91%E6%8E%A7%E4%BA%8B%E4%BB%B6#</a></li>
+</ol>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-04</span>
+            
+            
+             
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>

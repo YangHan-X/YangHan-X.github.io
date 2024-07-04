@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Hexo</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Hexo</a> 
+            <span class="description">不知道写啥，就祝大家暴富吧！</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%AE%9A%E5%88%B6%E5%8C%96%E5%9B%BE%E5%85%83"><span class="post-toc-text">定制化图元</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CustomGraphicRectItem-h"><span class="post-toc-text">CustomGraphicRectItem.h</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CustomGraphicRectItem-cpp"><span class="post-toc-text">CustomGraphicRectItem.cpp</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%AE%9A%E5%88%B6%E5%8C%96%E5%9C%BA%E6%99%AF"><span class="post-toc-text">定制化场景</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CustomGraphicScene-h"><span class="post-toc-text">CustomGraphicScene.h</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CustomGraphicScene-cpp"><span class="post-toc-text">CustomGraphicScene.cpp</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="post-toc-text">测试</span></a></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="定制化图元"><a href="#定制化图元" class="headerlink" title="定制化图元"></a>定制化图元</h1><h2 id="CustomGraphicRectItem-h"><a href="#CustomGraphicRectItem-h" class="headerlink" title="CustomGraphicRectItem.h"></a>CustomGraphicRectItem.h</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> CUSTOMGRAPHICRECTITEM_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CUSTOMGRAPHICRECTITEM_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QGraphicsItem&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QIcon&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QPainter&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QBrush&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QPixmap&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">b_item</span> &#123;</span><br><span class="line">    QIcon icon;</span><br><span class="line">    QString text1;</span><br><span class="line">    QString text2;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CustomGraphicRectItem</span> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> QGraphicsItem</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">CustomGraphicRectItem</span><span class="params">(QString topText, QList&lt;QList&lt;b_item&gt;&gt; dataList, QGraphicsItem *parent = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line">    ~<span class="built_in">CustomGraphicRectItem</span>();</span><br><span class="line"></span><br><span class="line">    <span class="function">QRectF <span class="title">boundingRect</span><span class="params">()</span> <span class="type">const</span> <span class="keyword">override</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">paint</span><span class="params">(QPainter *painter, <span class="type">const</span> QStyleOptionGraphicsItem *option, QWidget *widget = <span class="literal">nullptr</span>)</span> <span class="keyword">override</span></span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">totalHeight</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setTotalHeight</span><span class="params">(<span class="type">int</span> totalHeight)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> m_baseWidth;</span><br><span class="line">    <span class="type">int</span> m_baseHeight;</span><br><span class="line">    <span class="type">int</span> m_totalHeight;</span><br><span class="line">    QString m_topText;</span><br><span class="line">    QList&lt;QList&lt;b_item&gt;&gt; m_dataList;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// CUSTOMGRAPHICRECTITEM_H</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="CustomGraphicRectItem-cpp"><a href="#CustomGraphicRectItem-cpp" class="headerlink" title="CustomGraphicRectItem.cpp"></a>CustomGraphicRectItem.cpp</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;CustomGraphicRectItem.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QDebug&gt;</span></span></span><br><span class="line"></span><br><span class="line">CustomGraphicRectItem::<span class="built_in">CustomGraphicRectItem</span>(QString topText, QList&lt;QList&lt;b_item&gt;&gt; dataList, QGraphicsItem *parent) :</span><br><span class="line">    <span class="built_in">QGraphicsItem</span>(parent), <span class="built_in">m_baseWidth</span>(<span class="number">150</span>), <span class="built_in">m_baseHeight</span>(<span class="number">30</span>), <span class="built_in">m_totalHeight</span>(<span class="number">30</span>), <span class="built_in">m_topText</span>(topText), <span class="built_in">m_dataList</span>(dataList)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(QList&lt;b_item&gt; &amp;row : dataList)</span><br><span class="line">    &#123;</span><br><span class="line">        m_totalHeight += row.<span class="built_in">size</span>() * m_baseHeight;</span><br><span class="line">        <span class="built_in">qDebug</span>() &lt;&lt; row.<span class="built_in">size</span>() &lt;&lt; m_totalHeight;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">qDebug</span>() &lt;&lt; <span class="string">&quot;矩形总高度：&quot;</span> &lt;&lt; m_totalHeight;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CustomGraphicRectItem::~<span class="built_in">CustomGraphicRectItem</span>()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">QRectF <span class="title">CustomGraphicRectItem::boundingRect</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">QRectF</span>(<span class="number">0</span>, <span class="number">0</span>, m_baseWidth, m_totalHeight);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CustomGraphicRectItem::paint</span><span class="params">(QPainter *painter, <span class="type">const</span> QStyleOptionGraphicsItem *option, QWidget *widget)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    QRect topRect = <span class="built_in">QRect</span>(<span class="number">0</span>, <span class="number">0</span>, m_baseWidth, m_baseHeight);</span><br><span class="line">    painter-&gt;<span class="built_in">setBrush</span>(<span class="built_in">QBrush</span>(Qt::yellow));</span><br><span class="line">    painter-&gt;<span class="built_in">drawRect</span>(topRect);</span><br><span class="line">    painter-&gt;<span class="built_in">drawText</span>(topRect, Qt::AlignCenter, m_topText);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> curHeight = m_baseHeight;</span><br><span class="line">    <span class="type">int</span> cellHeight = <span class="number">0</span>;</span><br><span class="line">    painter-&gt;<span class="built_in">setBrush</span>(<span class="built_in">QBrush</span>(Qt::lightGray));</span><br><span class="line">    <span class="keyword">for</span>(QList&lt;b_item&gt; &amp;row : m_dataList)</span><br><span class="line">    &#123;</span><br><span class="line">        cellHeight = row.<span class="built_in">size</span>() * m_baseHeight;</span><br><span class="line">        QRect cellRect = <span class="built_in">QRect</span>(<span class="number">0</span>, curHeight, m_baseWidth, cellHeight);</span><br><span class="line">        painter-&gt;<span class="built_in">drawRect</span>(cellRect);</span><br><span class="line">        <span class="type">int</span> drawHeight = curHeight;</span><br><span class="line">        <span class="keyword">for</span>(b_item &amp;item : row)</span><br><span class="line">        &#123;</span><br><span class="line">            QRect cellLeftRect = <span class="built_in">QRect</span>((m_baseHeight - <span class="number">16</span>) * <span class="number">0.5</span>, drawHeight + (m_baseHeight - <span class="number">16</span>) * <span class="number">0.5</span>, <span class="number">16</span>, <span class="number">16</span>);</span><br><span class="line">            QRect cellCenterRect = <span class="built_in">QRect</span>(m_baseHeight, drawHeight, (m_baseWidth - m_baseHeight) * <span class="number">0.5</span>, m_baseHeight);</span><br><span class="line">            QRect cellRightRect = <span class="built_in">QRect</span>(m_baseHeight + (m_baseWidth - m_baseHeight) * <span class="number">0.5</span>, drawHeight, (m_baseWidth - m_baseHeight) * <span class="number">0.5</span>, m_baseHeight);</span><br><span class="line">            <span class="keyword">if</span>(!item.icon.<span class="built_in">isNull</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                QPixmap pixmap = item.icon.<span class="built_in">pixmap</span>(<span class="built_in">QSize</span>(<span class="number">16</span>, <span class="number">16</span>));</span><br><span class="line">                painter-&gt;<span class="built_in">drawPixmap</span>(cellLeftRect, pixmap);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!item.text1.<span class="built_in">isEmpty</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                painter-&gt;<span class="built_in">drawText</span>(cellCenterRect, Qt::AlignLeft | Qt::AlignVCenter, item.text1);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!item.text2.<span class="built_in">isEmpty</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                painter-&gt;<span class="built_in">drawText</span>(cellRightRect, Qt::AlignLeft | Qt::AlignVCenter, item.text2);</span><br><span class="line">            &#125;</span><br><span class="line">            drawHeight += m_baseHeight;</span><br><span class="line">        &#125;</span><br><span class="line">        curHeight += cellHeight;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CustomGraphicRectItem::totalHeight</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> m_totalHeight;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CustomGraphicRectItem::setTotalHeight</span><span class="params">(<span class="type">int</span> totalHeight)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    m_totalHeight = totalHeight;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="定制化场景"><a href="#定制化场景" class="headerlink" title="定制化场景"></a>定制化场景</h1><h2 id="CustomGraphicScene-h"><a href="#CustomGraphicScene-h" class="headerlink" title="CustomGraphicScene.h"></a>CustomGraphicScene.h</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> CUSTOMGRAPHICSCENE_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CUSTOMGRAPHICSCENE_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QGraphicsScene&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;CustomGraphicRectItem.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CustomGraphicScene</span> : <span class="keyword">public</span> QGraphicsScene</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">CustomGraphicScene</span><span class="params">(QObject *parent = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">CustomGraphicScene</span>();</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">addItemNSetPos</span><span class="params">(CustomGraphicRectItem *item)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">lineHeight</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setLineHeight</span><span class="params">(<span class="type">int</span> lineHeight)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> m_totalHeight;</span><br><span class="line">    <span class="type">int</span> m_lineHeight;</span><br><span class="line">    CustomGraphicRectItem *m_lastItem;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// CUSTOMGRAPHICSCENE_H</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="CustomGraphicScene-cpp"><a href="#CustomGraphicScene-cpp" class="headerlink" title="CustomGraphicScene.cpp"></a>CustomGraphicScene.cpp</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;CustomGraphicScene.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">CustomGraphicScene::<span class="built_in">CustomGraphicScene</span>(QObject *parent) :</span><br><span class="line">    <span class="built_in">QGraphicsScene</span>(parent), <span class="built_in">m_totalHeight</span>(<span class="number">0</span>), <span class="built_in">m_lineHeight</span>(<span class="number">30</span>), <span class="built_in">m_lastItem</span>(<span class="literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">CustomGraphicScene::~<span class="built_in">CustomGraphicScene</span>()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CustomGraphicScene::addItemNSetPos</span><span class="params">(CustomGraphicRectItem *item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>-&gt;<span class="built_in">addItem</span>(item);</span><br><span class="line">    item-&gt;<span class="built_in">setPos</span>(<span class="number">0</span>, <span class="keyword">this</span>-&gt;m_totalHeight);</span><br><span class="line">    <span class="keyword">this</span>-&gt;m_totalHeight += item-&gt;<span class="built_in">totalHeight</span>() + m_lineHeight;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>-&gt;m_lastItem)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 获取上一个图元的边界矩形的底部中心点</span></span><br><span class="line">        QPointF startPoint = <span class="built_in">QPointF</span>(m_lastItem-&gt;<span class="built_in">boundingRect</span>().<span class="built_in">center</span>().<span class="built_in">x</span>(), m_lastItem-&gt;<span class="built_in">boundingRect</span>().<span class="built_in">bottom</span>() + <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 获取新图元的边界矩形的顶部中心点</span></span><br><span class="line">        QPointF endPoint = <span class="built_in">QPointF</span>(item-&gt;<span class="built_in">boundingRect</span>().<span class="built_in">center</span>().<span class="built_in">x</span>(), item-&gt;<span class="built_in">boundingRect</span>().<span class="built_in">top</span>());</span><br><span class="line">        <span class="comment">// 将两个点的坐标转换为场景坐标</span></span><br><span class="line">        startPoint = m_lastItem-&gt;<span class="built_in">mapToScene</span>(startPoint);</span><br><span class="line">        endPoint = item-&gt;<span class="built_in">mapToScene</span>(endPoint);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建线条图元连接这两个点</span></span><br><span class="line">        QGraphicsLineItem *line = <span class="keyword">new</span> <span class="built_in">QGraphicsLineItem</span>(<span class="built_in">QLineF</span>(startPoint, endPoint));</span><br><span class="line">        QPen pen;</span><br><span class="line">        pen.<span class="built_in">setWidth</span>(<span class="number">2</span>);</span><br><span class="line">        line-&gt;<span class="built_in">setPen</span>(pen);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 绘制朝下的箭头</span></span><br><span class="line">        QPolygonF arrowHead;</span><br><span class="line">        arrowHead &lt;&lt; <span class="built_in">QPointF</span>(<span class="number">-3</span>, <span class="number">-10</span>) &lt;&lt; <span class="built_in">QPointF</span>(<span class="number">0</span>, <span class="number">0</span>) &lt;&lt; <span class="built_in">QPointF</span>(<span class="number">3</span>, <span class="number">-10</span>);</span><br><span class="line">        QGraphicsPolygonItem *arrow = <span class="keyword">new</span> <span class="built_in">QGraphicsPolygonItem</span>(arrowHead);</span><br><span class="line">        arrow-&gt;<span class="built_in">setBrush</span>(Qt::black);</span><br><span class="line">        arrow-&gt;<span class="built_in">setPos</span>(endPoint);</span><br><span class="line">        <span class="keyword">this</span>-&gt;<span class="built_in">addItem</span>(line);</span><br><span class="line">        <span class="keyword">this</span>-&gt;<span class="built_in">addItem</span>(arrow);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>-&gt;m_lastItem = item;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CustomGraphicScene::lineHeight</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> m_lineHeight;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CustomGraphicScene::setLineHeight</span><span class="params">(<span class="type">int</span> lineHeight)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    m_lineHeight = lineHeight;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Widget.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;ui_Widget.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">Widget::<span class="built_in">Widget</span>(QWidget *parent)</span><br><span class="line">    : <span class="built_in">QWidget</span>(parent)</span><br><span class="line">    , <span class="built_in">ui</span>(<span class="keyword">new</span> Ui::Widget)</span><br><span class="line">&#123;</span><br><span class="line">    ui-&gt;<span class="built_in">setupUi</span>(<span class="keyword">this</span>);</span><br><span class="line">    <span class="comment">// 加载场景</span></span><br><span class="line">    CustomGraphicScene *scene = <span class="keyword">new</span> CustomGraphicScene;</span><br><span class="line">    ui-&gt;graphicsView-&gt;<span class="built_in">setScene</span>(scene);</span><br><span class="line"></span><br><span class="line">    QList&lt;QList&lt;b_item&gt;&gt; dataList;</span><br><span class="line">    dataList.<span class="built_in">append</span>(&#123;&#123;<span class="built_in">QIcon</span>(<span class="string">&quot;:/test.png&quot;</span>), <span class="string">&quot;111&quot;</span>, <span class="string">&quot;112&quot;</span>&#125;, &#123;<span class="built_in">QIcon</span>(<span class="string">&quot;:/test.png&quot;</span>), <span class="string">&quot;121&quot;</span>, <span class="string">&quot;122&quot;</span>&#125;&#125;);</span><br><span class="line">    dataList.<span class="built_in">append</span>(&#123;&#123;<span class="built_in">QIcon</span>(), <span class="string">&quot;211&quot;</span>, <span class="string">&quot;212&quot;</span>&#125;&#125;);</span><br><span class="line">    dataList.<span class="built_in">append</span>(&#123;&#123;<span class="built_in">QIcon</span>(<span class="string">&quot;:/test.png&quot;</span>), <span class="string">&quot;311&quot;</span>, <span class="string">&quot;312&quot;</span>&#125;, &#123;<span class="built_in">QIcon</span>(<span class="string">&quot;:/test.png&quot;</span>), <span class="string">&quot;321&quot;</span>, <span class="string">&quot;322&quot;</span>&#125;&#125;);</span><br><span class="line"></span><br><span class="line">    CustomGraphicRectItem *item = <span class="keyword">new</span> <span class="built_in">CustomGraphicRectItem</span>(<span class="string">&quot;节点1&quot;</span>, dataList);</span><br><span class="line">    CustomGraphicRectItem *item2 = <span class="keyword">new</span> <span class="built_in">CustomGraphicRectItem</span>(<span class="string">&quot;节点2&quot;</span>, dataList);</span><br><span class="line">    CustomGraphicRectItem *item3 = <span class="keyword">new</span> <span class="built_in">CustomGraphicRectItem</span>(<span class="string">&quot;节点3&quot;</span>, dataList);</span><br><span class="line"></span><br><span class="line">    scene-&gt;<span class="built_in">addItemNSetPos</span>(item);</span><br><span class="line">    scene-&gt;<span class="built_in">addItemNSetPos</span>(item2);</span><br><span class="line">    scene-&gt;<span class="built_in">addItemNSetPos</span>(item3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Widget::~<span class="built_in">Widget</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">delete</span> ui;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-04</span>
+            
+            
+             
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
