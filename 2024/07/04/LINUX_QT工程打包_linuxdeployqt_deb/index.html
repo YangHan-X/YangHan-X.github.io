@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
-    <title>Hexo</title>
+    <title>Cure</title>
 
     
         
@@ -104,7 +104,7 @@
         width: 56px;
         height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
         <div class="header-content">
-            <a class="logo" href="/">Hexo</a> 
+            <a class="logo" href="/">Cure</a> 
             <span class="description">不知道写啥，就祝大家暴富吧！</span> 
         </div>
         
@@ -144,7 +144,7 @@
     <div class="post-md">
         
             
-                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-%E5%87%86%E5%A4%87%EF%BC%9A%E5%AE%89%E8%A3%85%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7linuxdepoyqt"><span class="post-toc-text">1. 准备：安装打包工具linuxdepoyqt</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-%E5%87%86%E5%A4%87%EF%BC%9A%E6%A3%80%E6%9F%A5qmake"><span class="post-toc-text">2. 准备：检查qmake</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-%E6%89%93%E5%8C%85"><span class="post-toc-text">3. 打包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-%E6%89%93%E5%8C%85%E4%B8%BAdeb"><span class="post-toc-text">4. 打包为deb</span></a></li></ol>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-%E5%87%86%E5%A4%87%EF%BC%9A%E5%AE%89%E8%A3%85%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7linuxdepoyqt"><span class="post-toc-text">1. 准备：安装打包工具linuxdepoyqt</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-%E5%87%86%E5%A4%87%EF%BC%9A%E6%A3%80%E6%9F%A5qmake"><span class="post-toc-text">2. 准备：检查qmake</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-%E6%89%93%E5%8C%85"><span class="post-toc-text">3. 打包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-%E6%89%93%E5%8C%85%E4%B8%BAdeb"><span class="post-toc-text">4. 打包为deb</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-deb"><span class="post-toc-text">5. deb</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%9Acontrol"><span class="post-toc-text">配置文件：control</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%EF%BC%9APlayer-desktop"><span class="post-toc-text">桌面文件：Player.desktop</span></a></li></ol></li></ol>
             
         
         <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="1-准备：安装打包工具linuxdepoyqt"><a href="#1-准备：安装打包工具linuxdepoyqt" class="headerlink" title="1. 准备：安装打包工具linuxdepoyqt"></a><strong>1.</strong> 准备：安装打包工具linuxdepoyqt</h2><p>(1). 下载inuxdepoyqt </p>
@@ -170,7 +170,7 @@
 <p>命令：<code>linuxdeployqt App -appimage</code>，报错执行3.3</p>
 <p>(3). 编辑配置文件</p>
 <p>执行<code>vim default.desktop</code>打开文件，在该文件末尾追加<code>Categories</code>（注意分号不可省略）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application					</span><br><span class="line">Name=TestAPP</span><br><span class="line">Exec=/usr/src/MyAPP/AppRun %F</span><br><span class="line">Icon=/usr/src/MyAPP/AppRun/images/logo.png</span><br><span class="line">Comment=Edit this default file</span><br><span class="line">Terminal=true</span><br><span class="line">Categories=Application;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application					</span><br><span class="line">Name=TestAPP</span><br><span class="line">Exec=/usr/src/MyAPP/AppRun %F</span><br><span class="line">Icon=/usr/src/MyAPP/AppRun/images/logo.png</span><br><span class="line">Comment=Edit this default file</span><br><span class="line">Terminal=true</span><br><span class="line">Categories=Application;音视频播放器</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>desktop官方手册：<a target="_blank" rel="noopener" href="https://help.ubuntu.com/community/UnityLaunchersAndDesktopFiles">https://help.ubuntu.com/community/UnityLaunchersAndDesktopFiles</a></p>
@@ -309,6 +309,26 @@
 <p>问题一：子进程 xxx 已安装 pre-removal 脚本 返回了错误号 1 或 2 </p>
 <p>解决方案：打开<code>gedit /var/lib/dpkg/status</code>,找到<code>Package: 包名</code>，将那一部分删除即可。</p>
 </blockquote>
+<h2 id="5-deb"><a href="#5-deb" class="headerlink" title="5. deb"></a>5. deb</h2><p>假设可程序程序名为<code>Player</code></p>
+<p>用<code>dpkg</code>打包之前，需要将程序的安装路径<code>映射</code>到软件包的主目录下。</p>
+<ul>
+<li>如创建一个目录<code>PlayerDeb</code>，作为软件包的主目录；</li>
+<li>假设要安装到目标计算机的<code>/usr/bin</code>目录中，就需要在<code>PlayerDeb</code>下创建对应目录，如<code>PlayerDeb/usr/bin</code>；</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">PlayerDeb							# 主目录</span><br><span class="line">|-- usr</span><br><span class="line">    |-- bin							# 存放可执行文件</span><br><span class="line">        |-- Player					# 存放可执行程序</span><br><span class="line">    |-- share</span><br><span class="line">        |-- Player					# 存放桌面文件和图标文件</span><br><span class="line">            |-- Player.desktop		# 桌面文件（指定软件的运行路径和图标路径）</span><br><span class="line">            |-- Player.png</span><br><span class="line">|-- DEBIAN							# 存放配置文件（control）和 4个脚本文件</span><br><span class="line">    |-- control						# 配置文件：编写配置信息</span><br><span class="line">    |-- preinst						# 脚本文件：安装时执行</span><br><span class="line">    |-- postinst					# 脚本文件：安装完执行（如建立软链接，复制desktop文件到桌面等）</span><br><span class="line">    |-- prerm						# 脚本文件：卸载时执行（如删除软链接，删除快捷方式等）</span><br><span class="line">    |-- postrm						# 脚本文件：卸载后执行</span><br><span class="line">|-- opt</span><br><span class="line">    |-- apps</span><br><span class="line">        |-- Player					# 软件安装目录</span><br><span class="line">            |-- program</span><br><span class="line">            |-- config</span><br><span class="line">|-- ./local/share/applications</span><br><span class="line">    |-- Player.desktop				# 系统菜单项</span><br><span class="line">    			</span><br><span class="line">        	</span><br><span class="line">		</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="配置文件：control"><a href="#配置文件：control" class="headerlink" title="配置文件：control"></a>配置文件：control</h3><p>control文件在打包时需要调用，desktop文件就会出现在系统菜单中，便于用户启动。</p>
+<p>control文件的基本配置项如下：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Package: Player									<span class="comment"># 软件包名称</span></span><br><span class="line">Version: 1.0.0									<span class="comment"># 软件包版本</span></span><br><span class="line">Description: This is a player deb package		<span class="comment"># 软件包描述</span></span><br><span class="line">Maintainer: WonderThink							<span class="comment"># 著作人信息（名称，联系方式，邮箱等）</span></span><br><span class="line">Architecture: amd64								<span class="comment"># 软件包支持的架构平台（i386/amd64,m64k,sparc,alpha,powerpc,...）		</span></span><br><span class="line">Section: utils									<span class="comment"># 软件包类别（utils,net,mail,text,x11,...）</span></span><br><span class="line">Source:											<span class="comment"># 软件包的源代码名称</span></span><br><span class="line">Priority: optional								<span class="comment"># 软件包对系统的优先级（required,standard,optional,extra,...）</span></span><br><span class="line">Installed_Size: 20</span><br><span class="line">Depends:										<span class="comment"># 软件依赖的其他软件包和库文件（多个用逗号隔开）</span></span><br><span class="line">Pre-Depends:									<span class="comment"># 软件安装前必须安装或依赖的软件包和库文件</span></span><br><span class="line">Recommends:										<span class="comment"># 推荐安装的其他软件包和库文件</span></span><br><span class="line">Suggests:										<span class="comment"># 建议安装的其他软件包和库文件</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="桌面文件：Player-desktop"><a href="#桌面文件：Player-desktop" class="headerlink" title="桌面文件：Player.desktop"></a>桌面文件：Player.desktop</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Desktop Entry]</span></span><br><span class="line"><span class="attr">Name</span>=Player									<span class="comment"># 程序名称</span></span><br><span class="line">Version: 1.0.0								<span class="comment"># 程序版本号</span></span><br><span class="line">Comment: This is a player deb package		<span class="comment"># 程序注释</span></span><br><span class="line"><span class="attr">Type</span>=Application							<span class="comment"># 程序类型</span></span><br><span class="line"><span class="attr">Exec</span>=/usr/bin/Player						<span class="comment"># 指定程序存放的路径</span></span><br><span class="line"><span class="attr">Icon</span>=/usr/share/Player/Player.png			<span class="comment"># 指定图标存放的路径</span></span><br><span class="line"><span class="attr">Terminal</span>=<span class="literal">false</span>								<span class="comment"># 是否打开程序时同时打开终端</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
 </div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
