@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="QT-QTableWidget基本使用" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Cure</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Cure</a> 
+            <span class="description">不知道写啥，就祝大家暴富吧！</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            QT-QTableWidget基本使用
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%B0%B4%E5%B9%B3%E8%A1%A8%E5%A4%B4"><span class="post-toc-text">设置水平表头</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%B0%83%E6%95%B4%E5%88%97%E5%AE%BD"><span class="post-toc-text">调整列宽</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE"><span class="post-toc-text">添加表格数据</span></a></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h3 id="设置水平表头"><a href="#设置水平表头" class="headerlink" title="设置水平表头"></a>设置水平表头</h3><p>设置水平表头之前，需要先设置列数，再设置表头。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">QTableWidget *table = <span class="keyword">new</span> <span class="built_in">QTableWidget</span>(<span class="keyword">this</span>);</span><br><span class="line">QStringList headerList;</span><br><span class="line">headerList &lt;&lt; <span class="string">&quot;编号&quot;</span> &lt;&lt; <span class="string">&quot;姓名&quot;</span> &lt;&lt; <span class="string">&quot;性别&quot;</span> &lt;&lt; <span class="string">&quot;年龄&quot;</span>;</span><br><span class="line">table-&gt;<span class="built_in">setColumnCount</span>(headerList.<span class="built_in">size</span>());</span><br><span class="line">table-&gt;<span class="built_in">setHorizonalHeaderLabels</span>(headerList);</span><br></pre></td></tr></table></figure>
+
+<p>运行后，会发现最后一列之后，还有空白未分配。</p>
+<h3 id="调整列宽"><a href="#调整列宽" class="headerlink" title="调整列宽"></a>调整列宽</h3><p>QT提供了一个枚举<code>enum ResizeMode</code>，来设置列宽模式：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">ResizeMode</span></span><br><span class="line">&#123;</span><br><span class="line">    Interactive, 		<span class="comment">// 交互模式，可通过拖拽表格分隔线，来调整表格列宽</span></span><br><span class="line">    Stretch,			<span class="comment">// 拉伸模式，使每一列的宽度都相等，并占满表格，且无法手动调整列宽	</span></span><br><span class="line">    Fixed, 				<span class="comment">// 固定模式，使每一列的宽度都固定</span></span><br><span class="line">    ResizeToContents, 	<span class="comment">// 变化模式，根据列标题文字宽度，来决定表格列宽</span></span><br><span class="line">    Custom = Fixed		<span class="comment">// 自定义，默认为固定模式</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上述几种模式各有优缺点，所以一般都混合使用。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置水平表头为拉伸模式，并使得第一列的列宽为50；</span></span><br><span class="line">table-&gt;<span class="built_in">horizontalHeader</span>()-&gt;<span class="built_in">setSectionResizeMode</span>(QHeaderView::Stretch);</span><br><span class="line">table-&gt;<span class="built_in">horizontalHeader</span>()-&gt;<span class="built_in">setSectionResizeMode</span>(<span class="number">0</span>, QHeaderView::Fixed);</span><br><span class="line">table-&gt;<span class="built_in">setColumnWidth</span>(<span class="number">0</span>, <span class="number">50</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置水平表头为交互模式，并使得最后一列自动拉伸</span></span><br><span class="line">table-&gt;<span class="built_in">horizontalHeader</span>()-&gt;<span class="built_in">setSectionResizeMode</span>(QHeaderView::Interactive);</span><br><span class="line">table-&gt;<span class="built_in">horizontalHeader</span>()-&gt;<span class="built_in">setStretchLatSection</span>(<span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加表格数据"><a href="#添加表格数据" class="headerlink" title="添加表格数据"></a>添加表格数据</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置行数：</span></span><br><span class="line"><span class="comment">//   方法1：table-&gt;setRowCount(row);	</span></span><br><span class="line"><span class="comment">//   方法2：table-&gt;inserRow(row);</span></span><br><span class="line"><span class="type">int</span> row = table-&gt;<span class="built_in">rowCount</span>();</span><br><span class="line">table-&gt;<span class="built_in">insertRow</span>(row);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加数据</span></span><br><span class="line">QStringList data;</span><br><span class="line">data &lt;&lt; <span class="string">&quot;1001&quot;</span> &lt;&lt; <span class="string">&quot;用户1&quot;</span> &lt;&lt; <span class="string">&quot;女&quot;</span> &lt;&lt; <span class="string">&quot;18&quot;</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; data.<span class="built_in">size</span>(); i++)</span><br><span class="line">&#123;</span><br><span class="line">    QTableWidgetItem* item = <span class="keyword">new</span> <span class="built_in">QTableWidgetItem</span>();</span><br><span class="line">    item-&gt;<span class="built_in">setText</span>(QString::<span class="built_in">number</span>(i));</span><br><span class="line">    table-&gt;<span class="built_in">setItem</span>(row, i, item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-08-07</span>
+            
+            
+             
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>

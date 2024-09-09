@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="QT-QStyledItemDelegate类" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Cure</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Cure</a> 
+            <span class="description">不知道写啥，就祝大家暴富吧！</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            QT-QStyledItemDelegate类
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#QStyledItemDelegate"><span class="post-toc-text">QStyledItemDelegate</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A7%94%E6%89%98-%E2%80%94%E2%80%94-QSpinBox"><span class="post-toc-text">自定义委托 —— QSpinBox</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A7%94%E6%89%98%EF%BC%9ACustomSpinBoxDelegate"><span class="post-toc-text">自定义委托：CustomSpinBoxDelegate</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BB%E7%95%8C%E9%9D%A2%EF%BC%9AMainWidget"><span class="post-toc-text">主界面：MainWidget</span></a></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="QStyledItemDelegate"><a href="#QStyledItemDelegate" class="headerlink" title="QStyledItemDelegate"></a>QStyledItemDelegate</h2><p>在QT中，当我们在视图中显示来自模型的数据时，采用的是<code>委托</code>的方式进行绘制每一个项目（单元格）。可以自定义项目处于编辑状态时的显示方式，来减少自定义项目的代码量。</p>
+<p><code>QStyledItemDelegate</code> 是QT提供给视图的默认委托，其在项目（单元格）被创建时安装，相似的还有<code>QItemDelegate</code>类。</p>
+<p>若委托不支持绘制所需要的数据类型，我们需要子类化<code>QStyledItemDelegate</code> 来绘制自定义项目的显示方式。</p>
+<blockquote>
+<p>比如，我们想在<code>QTableView</code>的单元格中显示一个<code>QProcessBar</code>控件，就需要自定义委托。</p>
+</blockquote>
+<p>自定义委托需要实现以下虚函数：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 指定index项在编辑时显示的编辑器(editor)，并返回，父控件(parent)和样式选项(option)用于控制editor的显示方式</span></span><br><span class="line"><span class="function">QWidget *<span class="title">createEditor</span><span class="params">(QWidget *parent,</span></span></span><br><span class="line"><span class="params"><span class="function">                      <span class="type">const</span> QStyleOptionViewItem &amp;option,</span></span></span><br><span class="line"><span class="params"><span class="function">                      <span class="type">const</span> QModelIndex &amp;index)</span> <span class="type">const</span> <span class="keyword">override</span></span>;</span><br><span class="line"><span class="comment">// 获取index项的数据，并显示在编辑器(editor)中</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setEditorData</span><span class="params">(QWidget *editor, <span class="type">const</span> QModelIndex &amp;index)</span> <span class="type">const</span> <span class="keyword">override</span></span>;</span><br><span class="line"><span class="comment">// 将编辑器(editor)的数据更新到模型中</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setModelData</span><span class="params">(QWidget *editor,</span></span></span><br><span class="line"><span class="params"><span class="function">                  QAbstractItemModel *model,</span></span></span><br><span class="line"><span class="params"><span class="function">                  <span class="type">const</span> QModelIndex &amp;index)</span> <span class="type">const</span> <span class="keyword">override</span></span>;</span><br><span class="line"><span class="comment">// 设置编辑器相对于index项的显示位置</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">updateEditorGeometry</span><span class="params">(QWidget *editor,</span></span></span><br><span class="line"><span class="params"><span class="function">                          <span class="type">const</span> QStyleOptionViewItem &amp;option,</span></span></span><br><span class="line"><span class="params"><span class="function">                          <span class="type">const</span> QModelIndex &amp;index)</span> <span class="type">const</span> <span class="keyword">override</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果需要默认就显示指定的控件，还需要实现 <code>paint()</code> 和 <code>sizeHint()</code>，其中 <code>sizeHint()</code> 可选；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">paint</span><span class="params">(QPainter *painter,</span></span></span><br><span class="line"><span class="params"><span class="function">               <span class="type">const</span> QStyleOptionViewItem &amp;option, <span class="type">const</span> QModelIndex &amp;index)</span> <span class="type">const</span> <span class="keyword">override</span></span>;</span><br><span class="line"><span class="function">QSize <span class="title">sizeHint</span><span class="params">(<span class="type">const</span> QStyleOptionViewItem &amp;option,</span></span></span><br><span class="line"><span class="params"><span class="function">               <span class="type">const</span> QModelIndex &amp;index)</span> <span class="type">const</span> <span class="keyword">override</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="自定义委托-——-QSpinBox"><a href="#自定义委托-——-QSpinBox" class="headerlink" title="自定义委托 —— QSpinBox"></a>自定义委托 —— QSpinBox</h2><p>需求：</p>
+<p>(1). 为<code>QTableView</code>中任意一列设置委托，设置其编辑时控件为<code>QSpinBox</code>； </p>
+<p>(2). 为<code>QTableView</code>中任意一列设置委托，设置其显示时控件为<code>QProcessBar</code>；</p>
+<h3 id="自定义委托：CustomSpinBoxDelegate"><a href="#自定义委托：CustomSpinBoxDelegate" class="headerlink" title="自定义委托：CustomSpinBoxDelegate"></a>自定义委托：CustomSpinBoxDelegate</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="主界面：MainWidget"><a href="#主界面：MainWidget" class="headerlink" title="主界面：MainWidget"></a>主界面：MainWidget</h3></div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-15</span>
+            
+                <span>该篇文章被 Yang Han</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/QT/'>
+                            QT
+                        </a>
+                    
+                </span>
+             
+             
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊看过大海的人不会忘记海的广阔🌊</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
